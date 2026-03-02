@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Business Name | Professional Website Design</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Modern Web Designs</h1>
+    <p>Professional Website Design for Small Businesses</p>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+    <button id="darkToggle" class="darkToggle" aria-label="Toggle dark mode">
+    🌙
+</button>
+</nav>
+
+
+
+<section class="hero">
+    <h2>Modern Websites That Grow Your Business</h2>
+    <p>Affordable, fast, and built to convert visitors into customers.</p>
+</section>
+
+<section class="portfolio">
+    <h2>Recent Projects</h2>
+
+    <div class="portfolio-slider">
+        <button class="arrow left">&#10094;</button>
+
+        <div class="desktop-frame">
+            <div class="desktop-topbar">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+            </div>
+
+            <img id="slider-image" src="images/project1.png" alt="Website Project">
+        </div>
+
+        <button class="arrow right">&#10095;</button>
+    </div>
+</section>
+
+<section id="about" class="container">
+    <h2>About Us</h2>
+    <p>
+        We create clean, modern, and responsive websites for small businesses.
+        Whether you're starting out or upgrading your online presence,
+        we build websites that help you stand out and grow.
+    </p>
+</section>
+
+<section id="services" class="container fade-in">
+    <h2>Our Services</h2>
+    <div class="services">
+        <div class="card">
+            <h3>Custom Website Design</h3>
+            <p>Unique websites tailored to your brand and goals.</p>
+        </div>
+
+        <div class="card">
+            <h3>SEO Optimization</h3>
+            <p>Rank higher on Google and attract more customers.</p>
+        </div>
+
+        <div class="card">
+            <h3>Website Maintenance</h3>
+            <p>Ongoing support and performance improvements.</p>
+        </div>
+    </div>
+</section>
+
+<section class="contact-section">
+
+    <div class="cta">
+        <h2>Ready to Grow Your Business?</h2>
+        <p>Let's build your website today.</p>
+        <button onclick="window.location='#contactForm'">Get Started</button>
+    </div>
+
+    <div class="contact-container">
+
+        <div class="contact-info">
+            <h2>Contact Us</h2>
+            <p>Email: mohamedwebservices@gmail.com</p>
+            <p>Phone: (585) 789-7145</p>
+        </div>
+
+        <form id="contactForm" class="contact-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+            <p id="formMessage"></p>
+        </form>
+
+    </div>
+
+</section>
+
+
+<footer>
+    <p>&copy; 2026 Modern Web Designs | All Rights Reserved</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
