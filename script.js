@@ -147,3 +147,37 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const form = document.querySelector(".contact-form");
+    const status = document.querySelector(".form-status");
+
+    async function handleSubmit(event) {
+        event.preventDefault();
+
+        const data = new FormData(form);
+
+        fetch(form.action, {
+            method: form.method,
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            if (response.ok) {
+                status.textContent = "✅ Message sent successfully!";
+                form.reset();
+            } else {
+                response.json().then(data => {
+                    status.textContent = "❌ Oops! Something went wrong.";
+                });
+            }
+        }).catch(error => {
+            status.textContent = "❌ Network error. Try again.";
+        });
+    }
+
+    form.addEventListener("submit", handleSubmit);
+
+});
